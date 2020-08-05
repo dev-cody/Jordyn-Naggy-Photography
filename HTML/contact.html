@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <title>Jordyn Naggy | Contact</title>
 </head>
 <body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <img src="../images/index/logo.png" alt="Photos by Jordyn" class="logo"/>
+        <nav class="main-nav">
+            <div class="toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- End Header -->
     
+    <!-- Contact Form -->
+    <div class="form-container">
+        <h1>Contact me!</h1>
+        <form method="POST" name="Main Contact Form" class="main-form" data-netlify="true">
+            <div class="form-content">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="John Doe">
+            </div>
+            <div class="form-content">
+                <label for="email">Email Address:</label>
+                <input type="email" name="email" id="email" placeholder="john.doe@email.com">
+            </div>
+            <div class="form-content">
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" id="subject" placeholder="Wedding Photos">
+            </div>
+            <div class="form-content">
+                <label for="messages">Let's chat!</label> <br>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Sumbit!</button>
+        </form>
+    </div>
+    <!-- End Contact Form -->
 </body>
 </html>
