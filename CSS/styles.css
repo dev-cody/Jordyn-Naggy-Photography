@@ -33,15 +33,6 @@ p {
     padding: 0;
 }
 
-form {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    height: 60%;
-}
-
 /******** 2. Class Styles **********/
 
 .about-container {
@@ -82,13 +73,20 @@ form {
     font-size: 2rem;
     text-shadow: 3px 3px 10px rgba(113, 136, 172, 0.74);
     opacity: .6;
+    width: 100%;
+}
+
+.form-background h1 {
+    margin: 0;
 }
 
 .form-container {
-    border-radius: 5px;
-    margin: 2% 5%;
-    height: 70vh;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 2% auto;
 }
 
 .footer-logo {
@@ -212,7 +210,117 @@ form {
     flex-wrap: wrap;
 }
 
-/******** 4. Fade Animations *********/
+/**************************************
+        Form Styles
+**************************************/
+
+form {
+    width: 50%;
+    margin: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-group {
+    position: relative;
+    width: 360px;
+    border-bottom: 3px solid black;
+    margin: 3%;
+}
+
+.input-group input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    padding: 3%;
+    font-size: 1rem;
+    outline: none;
+    color: #9d966d;
+}
+
+.input-group:hover,
+.input-group:focus-within {
+    border-bottom: 3px solid black;
+}
+
+.input-group input:focus,
+.input-group:hover input {
+    color: #9d966d;
+}
+
+.input-group label {
+    position: absolute;
+    background-color: transparent;
+    padding: 5%;
+    line-height: 25px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    cursor: text;
+    transition: ease-in .2s;
+}
+
+.input-group:hover label {
+    color: #9d966d;
+}
+
+.input-group:focus-within label,
+.input-group input:not(:placeholder-shown) ~ label {
+    padding: 0px 8px;
+    top: -12px;
+    bottom: auto;
+    left: 3px;
+    transition: ease-in .2s;
+}
+
+/* Special case for the chat text area */
+.chat-group {
+    position: relative;
+    width: 360px;
+    margin: 3%;
+}
+
+.chat-group label {
+    padding: 3%;
+}
+
+textarea {
+    width: 360px;
+    border: 2px solid black;
+    outline: none;
+    padding: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+form button {
+    position: relative;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #9d966d;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form button:hover {
+    top: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+form button:active {
+    top: 4px;
+    box-shadow: none;
+}
+
+
+/**************************************
+        Fade animations 
+**************************************/
 
 .fade {
     -webkit-animation-name: fade;
